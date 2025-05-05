@@ -29,30 +29,37 @@ canvas {
   pointer-events: none;
 }
 
-/* All links – homepage and back-home */
-a, .project-list a {
-  color: #d67283;
+/* Homepage links - keep visible but not overwhelming */
+a {
+  color: #aa5d69; /* Slightly darker than before */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
+/* Back-home link should remain prominent */
 .back-home {
-  color: #d67283;
+  color: #d67283; /* Original color - maintain visibility */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
+/* Project links should be more subtle */
 .project-link {
-  color: #d67283;
-  text-decoration-line: underline;
-  /* text-decoration-style: wavy; */
-  text-underline-offset: 2px;
-  transition: color 0.3s ease;
+  color: #aa5d69; /* Matching the regular links */
+  text-decoration: none;
+  border-bottom: 1px dotted #aa5d69;
+  padding-bottom: 1px;
+  transition: all 0.3s ease;
 }
 
-a:hover, .back-home:hover, .project-list .project-link:hover, a:hover {
-  color: #ff9dab; /* NEW hover color */
+/* All hover states use the same bright color */
+a:hover, .back-home:hover, .project-link:hover {
+  color: #ff9dab; /* Lighter pink on hover */
+}
+
+.project-link:hover {
+  border-bottom-color: #ff9dab;
 }
 
 img, video {
@@ -80,4 +87,98 @@ img, video {
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 1.5rem 0;
+}
+
+/* Image styling */
+.project-image {
+  display: block;
+  max-width: 100%;
+  max-height: 500px; /* Adjust this value to your preference */
+  margin: 2rem auto; /* Centers the image and adds vertical space */
+  border-radius: 8px;
+  object-fit: contain; /* Maintains aspect ratio */
+}
+
+/* For smaller images that should stay their original size */
+.project-image-small {
+  display: block;
+  max-height: 300px; /* Smaller max height */
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* For image containers */
+.image-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+
+/* CSS for GIFs */
+.project-gif {
+  display: block;
+  max-width: 100%;
+  max-height: 500px; /* Consistent with other images */
+  margin: 2rem auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* For smaller GIFs that should be displayed inline */
+.project-gif-small {
+  display: block;
+  max-height: 300px;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+
+/* CSS for Google Drive embedded videos */
+.drive-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.drive-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap; /* Ensures images stack on mobile */
+}
+
+.image-row img {
+  width: auto;
+  height: auto;
+  max-height: 300px;
+  max-width: 45%; /* Ensures images don't get too big */
+  margin: 0 10px 10px 10px;
+  border-radius: 8px;
+}
+
+.project-date {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #8a9a99; /* Soft teal that complements your existing color scheme */
+  margin-top: -0.5rem; /* Pulls it closer to the heading */
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em; /* Slight letter spacing for emphasis */
+  /* font-style: italic; */
 }
