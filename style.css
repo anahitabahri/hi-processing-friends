@@ -1,0 +1,83 @@
+body {
+  font-family: 'Space Mono', monospace;
+  font-weight: 300; /* light default weight */
+  margin: 0;
+  padding: 2rem;
+  background-color: #000000;
+  color: #f6eee3;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* bold headings */
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* All links – homepage and back-home */
+a, .project-list a {
+  color: #d67283;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-home {
+  color: #d67283;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-link {
+  color: #d67283;
+  text-decoration-line: underline;
+  /* text-decoration-style: wavy; */
+  text-underline-offset: 2px;
+  transition: color 0.3s ease;
+}
+
+a:hover, .back-home:hover, .project-list .project-link:hover, a:hover {
+  color: #ff9dab; /* NEW hover color */
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.snippet {
+  background-color: #1a1a1a; /* dark gray for contrast */
+  color: #f6eee3;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
